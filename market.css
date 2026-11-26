@@ -441,3 +441,9 @@ height: 260px;
     background-color: var(--main-color);
     width: 100%;
 }
+@media (max-width: 580px) {
+    .A{
+        display: none;
+        
+    }
+}
