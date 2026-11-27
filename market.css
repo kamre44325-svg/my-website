@@ -158,11 +158,14 @@ align-items: center;
     background-color: var(--main-color);
     color: black;
 }
-@media (min-width: 350px) and (max-width: 600px) {
+@media (min-width: 250px) and (max-width: 600px) {
     .about div{
         width: 90%;
         margin: 20px auto;
         text-align: center;
+    }
+    .Al{
+        display: none;
     }
 }
 @media (min-width: 600px) and (max-width: 767px)  {
@@ -170,13 +173,10 @@ align-items: center;
         width: 90%;
         margin: 20px auto;
     }
-    .parent{
-    max-width:400px;
-        display:flex;
-        flex-direction:column;
-        align-itemes:center;
+    .Al{
+        width: fit-content;
+        padding: 10px;
     }
-    
 }
 /*end about*/
 .product{
@@ -268,7 +268,6 @@ align-items: center;
         "sectio";
         grid-template-columns: 1fr;
     }
-    
     .product .screen{
         grid-area: sectio;
         height: 500px;
@@ -286,7 +285,6 @@ align-items: center;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        padding:20px;
     }
     .product .side ul li{
         margin-left: 15px;
@@ -367,7 +365,7 @@ height: 260px;
     margin-top: 5px;
 }
 .parent{
-    max-width: 800px;
+    width: 800px;
     height: 500px;
     background-color: var(--main-color);
     position: absolute;
@@ -400,6 +398,49 @@ height: 260px;
     width: 150px;
     line-height: 40px;
     font-size: 22px;
+}
+@media (min-width:150px) and (max-width:580px){
+    .sactive{
+        overflow-y: scroll;
+    }
+    .Al{
+        display: none;
+    }
+    .parent{
+        display: none;
+    }
+    .product .side ul{
+        display: flex;
+        flex-wrap: wrap;
+        overflow-x: scroll;
+        list-style: none;
+    line-height: 50px;
+    margin-top: 20px ;
+    margin-bottom: 20px ;
+    cursor: pointer;
+    padding-bottom: 40px;
+    }
+    .product .side ul li{
+        margin-left: 0px;
+        padding: 0px;
+        letter-spacing: 0px;
+    font-size: 10px;
+    width: fit-content;
+    }
+    .active{
+        transform: translateY(-10px);
+    }
+    .h{
+        display: block;
+        font-size: 15px;
+        padding-bottom: 15px;
+    }
+    .sactive .cards .card img{
+    width: 200px;
+    height: 210px;
+    border-radius: 10px;
+}
+
 }
 .footer{
     height: 400px;
@@ -440,9 +481,4 @@ height: 260px;
     text-align: center;
     background-color: var(--main-color);
     width: 100%;
-}
-@media (max-width: 580px) {
-    .Al{
-        display: none;
-    }
 }
