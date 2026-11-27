@@ -399,6 +399,20 @@ height: 260px;
     line-height: 40px;
     font-size: 22px;
 }
+@media (min-width:640px) and (max-width:1220px){
+    .parent{
+    width: 800px;
+    height: 500px;
+    background-color: var(--main-color);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+   transform: translate(-50%,-50%);
+   display: flex;
+   align-content: center;
+   border-radius: 10px;
+}
+}
 @media (min-width:150px) and (max-width:580px){
     .sactive{
         overflow-y: scroll;
